@@ -14,4 +14,22 @@ def print_repeating(arr1, size):
 # Driver code
 arr = [4, 2, 4, 5, 2, 3, 1]
 arr_size = len(arr)
-print_repeating(arr, arr_size)
+print_repeating(arr, arr_size)  # O(n)
+
+# ------------------------------------------------------------------------------------------------------------------
+
+print("")
+arr1 = [4, 2, 4, 5, 2, 3, 1]
+
+
+def repeat_int(n):
+    repeat = []
+    for i in range(len(n)):
+        j = i + 1
+        for j in range(j, len(n)):
+            if n[i] == n[j] and n[i] not in repeat:
+                repeat.append(n[i])
+    return repeat
+
+
+print(repeat_int(arr1))     # O(n^2)
