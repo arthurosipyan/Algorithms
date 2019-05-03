@@ -4,7 +4,7 @@ arr1 = [4, 12, 21, 1, 5]
 arr2 = [12, 7, 2, 1, 10, 3]
 
 
-def sum_of_two(arr):
+def two_element_sum(arr):
     arr.sort()
     print("Sorted Array: " + str(arr))
     for num, next_num in zip(arr[::], arr[1::]):
@@ -13,5 +13,5 @@ def sum_of_two(arr):
     return "No 2 elements add up to 15 in this array."
 
 
-print("Arr1: " + str(sum_of_two(arr1)))
-print("Arr2: " + str(sum_of_two(arr2)))
+print("Arr1: " + str(two_element_sum(arr1)))
+print("Arr2: " + str(two_element_sum(arr2)))
